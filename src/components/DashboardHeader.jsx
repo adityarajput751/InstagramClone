@@ -1,20 +1,27 @@
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 
 const DashboardHeader = () => {
   return (
-    <View style={styles.mainContainer}>
-      <View style={styles.container}>
+    <View style={{flex: 1}}>
+      <View
+        style={{
+          paddingVertical: 15,
+          paddingHorizontal: 15,
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}>
         <Image
           source={require('../assets/Instagram.png')}
           style={{height: 28, width: 110}}
         />
-        <View style={styles.rightContainer}>
+        <View style={{flexDirection: 'row'}}>
           <TouchableOpacity style={{marginRight: 20}}>
             <Image source={require('../assets/Like.png')} />
           </TouchableOpacity>
-          <View style={{position: 'relative'}}>
-            <TouchableOpacity>
+          <TouchableOpacity>
+            <View style={{position: 'relative'}}>
               <Image source={require('../assets/Messanger.png')} />
               <View style={{position: 'absolute', bottom: 15, left: 10}}>
                 <Text
@@ -28,8 +35,8 @@ const DashboardHeader = () => {
                   7
                 </Text>
               </View>
-            </TouchableOpacity>
-          </View>
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
@@ -37,24 +44,3 @@ const DashboardHeader = () => {
 };
 
 export default DashboardHeader;
-
-const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
-    // paddingVertical: 15,
-    // paddingHorizontal: 10,
-    // flexDirection: 'row',
-    // justifyContent: 'space-between',
-    // alignItems:'center'
-  },
-  rightContainer: {
-    flexDirection: 'row',
-  },
-  container: {
-    paddingVertical: 15,
-    paddingHorizontal: 15,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-});
