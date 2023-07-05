@@ -2,15 +2,17 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import Login from './src/screens/auth/Login'
 import Signup from './src/screens/auth/Signup'
-import Home from './src/screens/dashboard/Home'
+import StackNavigation from './src/navigator/StackNavigation'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 const App = () => {
   return (
-    <View style={{flex: 1}}>
+    <SafeAreaView style={{flex: 1}}>
       {/* <Login /> */}
       {/* <Signup /> */}
-      <Home />
-    </View>
+      {/* <Home /> */}
+      <StackNavigation />
+    </SafeAreaView>
   )
 }
 
