@@ -4,8 +4,10 @@ import {Formik} from 'formik';
 import {SignupValidationSchema, signupInitialValue} from './utils';
 import InputBox from '../../components/InputBox';
 import LoginButton from '../../components/LoginButton';
+import { useNavigation } from '@react-navigation/native';
 
 const Signup = () => {
+  const navigation = useNavigation();
   const handleSignup = values => {
     console.log(values);
   };
@@ -54,7 +56,7 @@ const Signup = () => {
         </TouchableOpacity>
       </View>
       <View style={{justifyContent:'flex-end', flex: 0.7, marginBottom: 20}}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={()=> navigation.goBack()}>
           <Text style={{fontSize: 16,textAlign: 'center'}}>Login</Text>
         </TouchableOpacity>
       </View>
