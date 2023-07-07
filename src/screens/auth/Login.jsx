@@ -1,15 +1,16 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import InputBox from '../../components/InputBox';
-import LoginButton from '../../components/LoginButton';
+import CustomButton from '../../components/CustomButton';
 import {Formik} from 'formik';
 import {loginInitialValue, validationSchema} from './utils';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
 const Login = () => {
   const navigation = useNavigation();
   const handleLogin = values => {
     console.log(values);
+    navigation.navigate('Home')
   };
   return (
     <View style={styles.mainContainer}>
@@ -50,7 +51,7 @@ const Login = () => {
                   errors={errors.password}
                   secureTextEntry
                 />
-                <LoginButton
+                <CustomButton
                   buttonTitle={'Login'}
                   onPress={handleSubmit}
                   disabled={!isValid}
@@ -64,7 +65,9 @@ const Login = () => {
         </TouchableOpacity>
       </View>
       <View style={{justifyContent: 'flex-end'}}>
-        <TouchableOpacity style={{marginBottom: 20, alignSelf: 'center'}} onPress={()=>navigation.navigate('Signup')}>
+        <TouchableOpacity
+          style={{marginBottom: 20, alignSelf: 'center'}}
+          onPress={() => navigation.navigate('Signup')}>
           <Text style={{fontSize: 16}}>Create new account</Text>
         </TouchableOpacity>
       </View>

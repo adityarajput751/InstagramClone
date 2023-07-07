@@ -3,7 +3,7 @@ import React from 'react';
 import {Formik} from 'formik';
 import {SignupValidationSchema, signupInitialValue} from './utils';
 import InputBox from '../../components/InputBox';
-import LoginButton from '../../components/LoginButton';
+import CustomButton from '../../components/CustomButton';
 import { useNavigation } from '@react-navigation/native';
 
 const Signup = () => {
@@ -42,7 +42,7 @@ const Signup = () => {
                   keyboardType={'numeric'}
                   maxLength={10}
                 />
-                <LoginButton
+                <CustomButton
                   buttonTitle={'Sign up'}
                   onPress={handleSubmit}
                   disabled={!isValid}

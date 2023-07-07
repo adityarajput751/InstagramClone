@@ -2,7 +2,7 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {AppColors} from '../utils/Colors';
 
-const LoginButton = ({buttonTitle, onPress, disabled}) => {
+const CustomButton = ({buttonTitle, onPress, disabled}) => {
   return (
     <View style={{alignItems:'center'}}>
       <TouchableOpacity onPress={onPress} disabled={disabled}>
@@ -22,7 +22,7 @@ const LoginButton = ({buttonTitle, onPress, disabled}) => {
   );
 };
 
-export default LoginButton;
+export default CustomButton;
 
 const styles = StyleSheet.create({
   buttonContainer: {
