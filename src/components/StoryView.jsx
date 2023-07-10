@@ -1,4 +1,12 @@
-import {View, Text, Image, Dimensions} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  Dimensions,
+  TouchableOpacity,
+  TextInput,
+  KeyboardAvoidingView,
+} from 'react-native';
 import React, {useEffect} from 'react';
 import {useNavigation} from '@react-navigation/native';
 
@@ -17,7 +25,7 @@ const StoryView = ({route}) => {
     }, 30000);
   }, []);
   return (
-    <View>
+    <View style={{backgroundColor: 'black', flex: 1}}>
       <View
         style={{
           paddingTop: 12,
@@ -40,9 +48,40 @@ const StoryView = ({route}) => {
       </View>
       <View style={{position: 'absolute'}}>
         <Image
-          style={{height: screenHeight - 90, width: screenWidth}}
+          style={{
+            height: screenHeight - 100,
+            width: screenWidth,
+            borderBottomLeftRadius: 15,
+            borderBottomRightRadius: 15,
+          }}
           source={selectedItem.story.image}
         />
+        <KeyboardAvoidingView
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            marginTop: 10
+          }}>
+          <TextInput
+            style={{
+              borderWidth: 1,
+              marginHorizontal: 30,
+              borderRadius: 30,
+              width: 300,
+              paddingHorizontal: 15,
+              color: 'white',
+              borderColor: 'white'
+            }}
+            placeholder="Message"
+            placeholderTextColor={'white'}
+          />
+          <TouchableOpacity>
+          <Image
+            style={{marginRight: 10, tintColor: 'white'}}
+            source={require('../assets/Messanger.png')}
+          />
+          </TouchableOpacity>
+        </KeyboardAvoidingView>
       </View>
     </View>
   );

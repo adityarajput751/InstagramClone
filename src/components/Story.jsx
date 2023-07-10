@@ -11,7 +11,7 @@ const Story = () => {
         return (
           <View style={{marginLeft: 10}}>
             <TouchableOpacity onPress={() => navigation.navigate("StoryPage", { item })}>
-              <View style={{borderWidth: 5, borderRadius: 40, padding : 2}}>
+              <View style={{borderWidth: 3, borderRadius: 40, padding : 2, borderColor: '#FF20B1'}}>
                 <Image
                   source={item.story.image}
                   style={{
