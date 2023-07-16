@@ -10,6 +10,7 @@ const Header = () => {
         alignItems: 'center',
         justifyContent: 'space-between',
         height: 50,
+        backgroundColor: 'white'
       }}>
       <View>
         <Image

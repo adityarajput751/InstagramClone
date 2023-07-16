@@ -1,15 +1,17 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import Header from '../../components/Header'
-import Story from '../../components/Story'
+import {View, Text, ScrollView} from 'react-native';
+import React from 'react';
+import Header from '../../components/Header';
+import Stories from '../../components/Stories';
+import Post from '../../components/Post';
 
 const Dashboard = () => {
   return (
-    <View style={{flex: 1,}}>
+    <ScrollView style={{flex: 1, backgroundColor: 'white'}}>
       <Header />
-      <Story />
-    </View>
-  )
-}
+      <Stories />
+      <Post />
+    </ScrollView>
+  );
+};
 
-export default Dashboard
+export default Dashboard;

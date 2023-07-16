@@ -35,8 +35,8 @@ export const UserData = [
     },
     {
         id: 3,
-        name : 'Modi',
-        username : 'nmodi',
+        name : 'Narendra Modi',
+        username : 'modi',
         profile : require('../assets/data/modidp.png'),
         story : {
             time : 15,
@@ -46,7 +46,7 @@ export const UserData = [
             time : '07:00 AM',
             date : '12/05/2023',
             image : require('../assets/data/modis.png'),
-            caption : '2000 ke note band',
+            caption : 'A memorable time',
             like : 99,
         }
     },
@@ -63,7 +63,7 @@ export const UserData = [
             time : '07:00 AM',
             date : '12/05/2023',
             image : require('../assets/data/sonmp.png'),
-            caption : 'carry on jatta',
+            caption : 'No edit, No touch ups...',
             like : 88,
         }
     },

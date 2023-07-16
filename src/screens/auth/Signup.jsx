@@ -12,7 +12,7 @@ const Signup = () => {
     console.log(values);
   };
   return (
-    <View style={{flex: 1, paddingHorizontal: 15, marginTop: 20}}>
+    <View style={{flex: 1, paddingHorizontal: 15, marginTop: 20, backgroundColor: 'white'}}>
       <View style={{flex: 0.3}}>
         <Text style={{fontSize: 25, fontWeight: '700', marginBottom: 20}}>
           What's your mobile number
