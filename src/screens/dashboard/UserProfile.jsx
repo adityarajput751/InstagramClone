@@ -1,12 +1,28 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  FlatList,
+  Dimensions,
+} from 'react-native';
+import React, {useState} from 'react';
+import ProfileHeader from '../../components/ProfileHeader';
+import {UserData, typeData} from '../../utils/UserData';
+import Post from '../../components/Post';
+import ProfilePosts from '../../components/ProfilePosts';
+import ProfileDetails from '../../components/ProfileDetails';
 
 const UserProfile = () => {
-  return (
-    <View>
-      <Text>UserProfile</Text>
-    </View>
-  )
-}
+  const screenWidth = Dimensions.get('window').width;
 
-export default UserProfile
+  return (
+    <View style={{flex: 1, backgroundColor: 'white'}}>
+      <ProfileHeader />
+      <ProfileDetails />
+      <ProfilePosts />
+    </View>
+  );
+};
+
+export default UserProfile;
