@@ -6,7 +6,7 @@ import Post from '../../components/Post';
 
 const Dashboard = () => {
   return (
-    <ScrollView style={{flex: 1, backgroundColor: 'white'}}>
+    <ScrollView showsHorizontalScrollIndicator={false} style={{flex: 1, backgroundColor: 'white'}}>
       <Header />
       <Stories />
       <Post />

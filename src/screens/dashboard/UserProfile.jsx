@@ -14,7 +14,6 @@ import ProfilePosts from '../../components/ProfilePosts';
 import ProfileDetails from '../../components/ProfileDetails';
 
 const UserProfile = () => {
-  const screenWidth = Dimensions.get('window').width;
 
   return (
     <View style={{flex: 1, backgroundColor: 'white'}}>

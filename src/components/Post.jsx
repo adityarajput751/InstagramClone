@@ -8,7 +8,7 @@ const Post = () => {
     <View style={{marginTop: 2}}>
       {UserData.map(item => {
         return (
-          <View style={{marginTop: 10}}>
+          <View key={item.id} style={{marginTop: 10}}>
             <View
               style={{
                 flexDirection: 'row',
@@ -36,22 +36,53 @@ const Post = () => {
                 source={item.post.image}
               />
             </View>
-            <View style={{paddingHorizontal: 13, flexDirection: 'row', alignItems: 'center', marginTop: 15}}>
-                <TouchableOpacity>
-                    <Image style={{height: 24, width: 28}} source={require('../assets/Like.png')} />
-                </TouchableOpacity>
-                <TouchableOpacity>
-                    <Image style={{height: 24, width: 24, marginLeft: 15}} source={require('../assets/Comment.png')} />
-                </TouchableOpacity>
-                <TouchableOpacity>
-                    <Image style={{height: 24, width: 28, marginLeft: 15}} source={require('../assets/Messanger.png')} />
-                </TouchableOpacity>
+            <View
+              style={{
+                paddingHorizontal: 13,
+                flexDirection: 'row',
+                alignItems: 'center',
+                marginTop: 15,
+              }}>
+              <TouchableOpacity>
+                <Image
+                  style={{height: 24, width: 28}}
+                  source={require('../assets/Like.png')}
+                />
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Image
+                  style={{height: 24, width: 24, marginLeft: 15}}
+                  source={require('../assets/Comment.png')}
+                />
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Image
+                  style={{height: 24, width: 28, marginLeft: 15}}
+                  source={require('../assets/Messanger.png')}
+                />
+              </TouchableOpacity>
             </View>
-            <Text style={{marginLeft:13, marginTop: 10, fontSize: 16, fontWeight:'600', color: 'black'}}>{item.post.like} likes</Text>
-                <View style={{flexDirection: 'row', paddingHorizontal: 13, alignItems: 'center'}}>
-                    <Text style={{color: 'black', fontSize: 16, fontWeight: '500',}}>{item.name}{' '}</Text>
-                    <Text style={{color: 'black'}}>{item.post.caption}</Text>
-                </View>
+            <Text
+              style={{
+                marginLeft: 13,
+                marginTop: 10,
+                fontSize: 16,
+                fontWeight: '600',
+                color: 'black',
+              }}>
+              {item.post.like} likes
+            </Text>
+            <View
+              style={{
+                flexDirection: 'row',
+                paddingHorizontal: 13,
+                alignItems: 'center',
+              }}>
+              <Text style={{color: 'black', fontSize: 16, fontWeight: '500'}}>
+                {item.name}{' '}
+              </Text>
+              <Text style={{color: 'black'}}>{item.post.caption}</Text>
+            </View>
           </View>
         );
       })}

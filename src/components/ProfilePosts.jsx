@@ -11,7 +11,7 @@ const ProfilePosts = () => {
         <View>
           <Image
             style={{height: 130.9, width: 130.9}}
-            source={item.item.profile}
+            source={item.item.post.image}
           />
         </View>
       );
