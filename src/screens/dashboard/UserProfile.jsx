@@ -1,27 +1,17 @@
-import {
-  View,
-  Text,
-  Image,
-  TouchableOpacity,
-  FlatList,
-  Dimensions,
-} from 'react-native';
-import React, {useState} from 'react';
-import ProfileHeader from '../../components/ProfileHeader';
-import {UserData, typeData} from '../../utils/UserData';
-import Post from '../../components/Post';
-import ProfilePosts from '../../components/ProfilePosts';
-import ProfileDetails from '../../components/ProfileDetails';
+import { View, Text } from 'react-native'
+import React from 'react'
+import ProfileHeader from '../../components/ProfileHeader'
+import ProfileDetails from '../../components/ProfileDetails'
+import ProfilePost from '../../components/ProfilePost'
 
 const UserProfile = () => {
-
   return (
-    <View style={{flex: 1, backgroundColor: 'white'}}>
+    <View style={{flex:  1, backgroundColor: 'white'}}>
       <ProfileHeader />
       <ProfileDetails />
-      <ProfilePosts />
+      <ProfilePost />
     </View>
-  );
-};
+  )
+}
 
-export default UserProfile;
+export default UserProfile

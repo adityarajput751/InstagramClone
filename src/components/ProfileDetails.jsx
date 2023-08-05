@@ -1,45 +1,34 @@
-import {View, Text, TouchableOpacity, Image} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 
 const ProfileDetails = () => {
   return (
-    <View
-      style={{
-        paddingHorizontal: 15,
-      }}>
+    <View style={{paddingHorizontal: 15}}>
       <View
         style={{
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
         }}>
-        <View
-          style={{
-            borderWidth: 2,
-            height: 85,
-            width: 85,
-            borderRadius: 82,
-          }}>
-          <Image
-            style={{height: 80, width: 80, borderRadius: 40}}
-            source={require('../assets/CodeBuilder.jpeg')}
-          />
-        </View>
+        <Image
+          style={{height: 80, width: 80, borderRadius: 4}}
+          source={require('../assets/CodeBuilder.jpeg')}
+        />
         <View style={{width: 75, alignItems: 'center'}}>
-          <Text style={{fontSize: 24, color: 'black', fontWeight: '400'}}>
+          <Text style={{fontSize: 24, fontWeight: '400', color: 'black'}}>
             4
           </Text>
           <Text style={{fontSize: 16, color: 'black'}}>Posts</Text>
         </View>
         <View style={{width: 75, alignItems: 'center'}}>
-          <Text style={{fontSize: 24, color: 'black', fontWeight: '400'}}>
+          <Text style={{fontSize: 24, fontWeight: '400', color: 'black'}}>
             1.2 M
           </Text>
           <Text style={{fontSize: 16, color: 'black'}}>Followers</Text>
         </View>
         <View style={{width: 75, alignItems: 'center'}}>
-          <Text style={{fontSize: 24, color: 'black', fontWeight: '400'}}>
-            2
+          <Text style={{fontSize: 24, fontWeight: '400', color: 'black'}}>
+            1
           </Text>
           <Text style={{fontSize: 16, color: 'black'}}>Following</Text>
         </View>
@@ -55,13 +44,13 @@ const ProfileDetails = () => {
       </Text>
       <Text style={{color: 'black'}}>React Native</Text>
       <Text style={{color: 'black'}}>Instagram Clone</Text>
-      <Text style={{fontSize: 16, color: 'black', fontWeight: '500'}}>
-        See Traslation
+      <Text style={{color: 'black', fontSize: 16, fontWeight: '500'}}>
+        See Translation
       </Text>
       <View
         style={{
-          marginTop: 18,
           flexDirection: 'row',
+          marginTop: 15,
           justifyContent: 'space-between',
           marginHorizontal: 10,
         }}>
@@ -70,10 +59,9 @@ const ProfileDetails = () => {
             style={{
               backgroundColor: '#E1E1E1',
               width: 150,
-              borderRadius: 5,
               paddingHorizontal: 10,
               paddingVertical: 5,
-              fontSize: 16,
+              borderRadius: 5,
               textAlign: 'center',
               color: 'black',
             }}>
@@ -85,10 +73,9 @@ const ProfileDetails = () => {
             style={{
               backgroundColor: '#E1E1E1',
               width: 150,
-              borderRadius: 5,
               paddingHorizontal: 10,
               paddingVertical: 5,
-              fontSize: 16,
+              borderRadius: 5,
               textAlign: 'center',
               color: 'black',
             }}>
